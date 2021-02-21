@@ -36,6 +36,8 @@ class Society(Agent):
 
     def __init__(self, population_size, average_degree):
         rearange_edges = int(average_degree*0.5)
+        #this network is too dense
+        rearange_edges = int(average_degree*0.05)
         self.size = population_size
         self.topology = nx.barabasi_albert_graph(population_size, rearange_edges)
 
